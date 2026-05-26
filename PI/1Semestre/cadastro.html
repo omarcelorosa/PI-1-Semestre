@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global/global.css">
+    <link rel="icon" type="image/png" href="logos/favicon.png"><!--Ícone do site(aba)-->
+    <title>SonoraWare</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="menu"></div>
+
+    <div style="height: 2000px;"></div>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("global/header.html").then(res => res.text()).then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+        fetch("global/footer.html").then(res => res.text()).then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+        fetch("global/menuSimples.html").then(res => res.text()).then(data => {
+                document.getElementById("menu").innerHTML = data;
+            });
+    </script>
+</body>
+</html>

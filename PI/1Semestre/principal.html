@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global/global.css">
+    <link rel="icon" type="image/png" href="logos/favicon.png"><!--Ícone do site(aba)-->
+    <title>SonoraWare</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="menu"></div>
+
+   <div class="eventos">
+        <div class="evento">
+            <div class="carrossel">
+                <img src="logos/iconeGrade.png" alt=""><!--(carrosel aqui)-->
+            </div>
+            <div class="descricao">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio qui ea explicabo repellat distinctio quaerat! Cum, aut sed delectus repudiandae quis omnis aliquid ipsam, quaerat autem natus modi eveniet unde debitis. Exercitationem magnam sit nesciunt debitis! Ipsum fugit, earum hic facere, omnis perspiciatis sed voluptatum adipisci inventore ea voluptate, voluptates amet veritatis non reprehenderit dolorum voluptatem consequatur quo doloribus quia aperiam veniam at. Minus sed qui exercitationem consequuntur, numquam doloremque culpa iusto excepturi iste odit natus quis velit dolores id quas deserunt distinctio eius aut, dolorem veritatis at nemo asperiores! Laudantium esse voluptatum suscipit vel deserunt eos explicabo dolores repudiandae.</p>
+            </div>
+        </div>
+            <div class="evento">
+            <div class="carrossel">
+                <img src="logos/iconeMonocromatico.png" alt=""><!--(carrosel aqui)-->
+            </div>
+            <div class="descricao">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae porro earum facilis nobis cupiditate culpa voluptate aspernatur quidem reprehenderit maiores doloremque distinctio quam fugiat, asperiores iure eligendi expedita sequi laborum reiciendis quisquam beatae exercitationem! Nam quia magnam similique laboriosam quisquam odit neque nulla quae accusantium ea itaque sint asperiores ad illo officiis, ullam animi debitis? Non libero vero quis ea, natus odio repellendus quae, maiores numquam assumenda quos adipisci perspiciatis dolore quibusdam voluptas modi tempora fugit animi a similique corporis quisquam. Delectus debitis sapiente cupiditate rerum pariatur quasi distinctio saepe quos vitae reprehenderit tenetur voluptatem in error, aut aperiam possimus.</p>
+            </div>
+        </div>
+   </div>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("global/header.html").then(res => res.text()).then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+        fetch("global/footer.html").then(res => res.text()).then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+        fetch("global/menuCompleto.html").then(res => res.text()).then(data => {
+                document.getElementById("menu").innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global/global.css">
+    <link rel="icon" type="image/png" href="logos/favicon.png">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Cadastro de Banda</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <div id="menu"></div>
+
+    <div class="container">
+
+        <h1>Cadastre sua Banda</h1>
+
+        <form>
+
+            <div class="linha">
+                <input type="text" placeholder="Nome da Banda/Artista">
+
+                <select>
+                    <option>Estilo Musical</option>
+                    <option>Rock</option>
+                    <option>Sertanejo</option>
+                    <option>Pop</option>
+                    <option>MPB</option>
+                </select>
+
+                <select>
+                    <option>Disponibilidade</option>
+                    <option>Fins de Semana</option>
+                    <option>Dias Úteis</option>
+                    <option>Qualquer Dia</option>
+                </select>
+            </div>
+
+            <div class="linha">
+
+                <div class="instrumentos">
+                    <label>Possui Instrumentos?</label>
+
+                    <div class="radio-group">
+                        <input type="radio" id="sim" name="instrumentos">
+                        <label for="sim">Sim</label>
+
+                        <input type="radio" id="nao" name="instrumentos">
+                        <label for="nao">Não</label>
+                    </div>
+                </div>
+
+                <select>
+                    <option>Cidade</option>
+                    <option>Franca</option>
+                    <option>Ribeirão Preto</option>
+                    <option>São Paulo</option>
+                </select>
+
+                <textarea placeholder="Sobre mim"></textarea>
+
+            </div>
+
+            <div class="redes">
+                <input type="text" placeholder="YouTube">
+                <input type="text" placeholder="Facebook">
+                <input type="text" placeholder="Instagram">
+            </div>
+
+            <div class="botoes">
+                <button type="button" class="voltar" onclick="window.location.href='cadastro.html'">
+                    Voltar
+                </button>
+
+                <button type="submit">
+                    Cadastrar
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("global/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+
+        fetch("global/footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        fetch("global/menuSimples.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("menu").innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>

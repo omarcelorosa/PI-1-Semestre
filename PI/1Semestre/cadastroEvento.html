@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global/global.css">
+    <link rel="icon" type="image/png" href="logos/favicon.png">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Cadastro de Evento</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <div id="menu"></div>
+
+    <div class="container">
+
+        <h1>Cadastre seu Evento</h1>
+
+        <form>
+
+            <div class="linha">
+                <input type="date">
+
+                <input type="time">
+
+                <input type="text" placeholder="Duração(Quantidade de Dias)">
+            </div>
+
+            <div class="linha">
+
+                <input type="text" placeholder="Cache">
+
+                <select>
+                    <option>Estilo Musical</option>
+                    <option>Rock</option>
+                    <option>Sertanejo</option>
+                    <option>Pop</option>
+                    <option>MPB</option>
+                    <option>Pagode</option>
+                    <option>Eletrônica</option>
+                </select>
+
+                <textarea placeholder="Sobre o Evento"></textarea>
+
+            </div>
+
+            <div class="botoes">
+                <button type="button" class="voltar" onclick="window.location.href='cadastro.html'">
+                    Voltar
+                </button>
+
+                <button type="submit">
+                    Enviar solicitação
+                </button>
+            </div>
+
+
+        </form>
+
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("global/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+
+        fetch("global/footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        fetch("global/menuSimples.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("menu").innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>

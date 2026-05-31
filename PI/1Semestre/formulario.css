@@ -1,0 +1,254 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin:0;
+    background:#f4f4f4;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+
+    margin:120px auto 40px auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:3rem;
+}
+
+.linha{
+    display:flex;
+    gap:30px;
+    margin-bottom:40px;
+}
+
+.linha input,
+.linha select,
+.linha textarea{
+    flex:1;
+}
+
+input,
+select,
+textarea{
+    padding:15px;
+    border:1px solid #bdbdbd;
+    border-radius:10px;
+    font-size:18px;
+}
+
+textarea{
+    resize:none;
+    height:70px;
+}
+
+.instrumentos{
+    flex:1;
+}
+
+.instrumentos label{
+    display:block;
+    margin-bottom:15px;
+}
+
+.radio-group{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.redes{
+    display:flex;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.redes input{
+    flex:1;
+}
+
+button{
+    display:block;
+    margin:auto;
+    padding:15px 40px;
+    border:none;
+    border-radius:10px;
+    background:#0d6efd;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0b5ed7;
+}
+
+@media(max-width:900px){
+
+    .linha,
+    .redes{
+        flex-direction:column;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+}
+
+header {
+    height: 58px;
+    background-color: rgb(15, 15, 37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 58px;
+    width: auto;
+    cursor: pointer;
+    align-items: left;
+}
+
+footer {
+    background-image: url(logos/footer.png);
+    margin: 0;
+    height: 58px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textFooter {
+    font-size: large;
+    color: white;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.icons img {
+    width: 40px;
+    filter: invert(1);
+    transition: 0.3s;
+}
+
+.icons img:hover {
+    transform: scale(1.1);
+    filter: invert(1) brightness(2);
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.anchor {
+    cursor: pointer;
+}
+
+.menuSimples {
+    height: 30px;
+    background-color: rgb(0, 110, 220);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 30px;
+    margin-top: 58px;
+}
+
+.barraMenu {
+    height: 30px;
+    background-color: rgb(0, 110, 220);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin-top: 58px;
+}
+
+.busca {
+    position: relative;
+}
+
+.busca input {
+    width: 500px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.busca span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+.botoes{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:40px;
+}
+
+.botoes button{
+    padding:15px 40px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.voltar{
+    background:#6c757d;
+    color:white;
+}
+
+.voltar:hover{
+    background:#5a6268;
+}

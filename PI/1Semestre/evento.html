@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="icon" type="image/png" href="logos/favicon.png"><!--Ícone do site(aba)-->
     <title>SonoraWare</title>
 </head>
+
 <body>
     <div id="header"></div>
     <div id="menu"></div>
@@ -15,7 +17,7 @@
         <div class="eventoPagina">
             <button class="btnAnterior">◀</button>
             <div class="carrosselEvento">
-            <img id="imagemEvento">
+                <img id="imagemEvento">
             </div>
             <button class="btnProximo">▶</button>
         </div>
@@ -23,46 +25,74 @@
             <p id="textoCarrossel"></p>
         </div>
     </main>
-    
+
     <div id="footer"></div>
     <script>
         fetch("global/header.html").then(res => res.text()).then(data => {
-                document.getElementById("header").innerHTML = data;
-            });
+            document.getElementById("header").innerHTML = data;
+        });
         fetch("global/footer.html").then(res => res.text()).then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
+            document.getElementById("footer").innerHTML = data;
+        });
         fetch("global/menuCompleto.html").then(res => res.text()).then(data => {
-                document.getElementById("menu").innerHTML = data;
-            });
-        
-        const eventos = [{imagem: "logos/iconePng.png",texto:"Lorem ipsum dolor sit amet."},{imagem: "logos/iconeGrade.png",texto:"Descrição da segunda imagem/evento."},{imagem: "logos/iconeMonocromatico.png",texto:"Descrição da terceira imagem/evento."}];
+            document.getElementById("menu").innerHTML = data;
+        });
+
+        const eventos = [
+            {
+                imagem: "logos/iconePng.png",
+                texto: "Lorem ipsum dolor sit amet."
+            },
+            {
+                imagem: "logos/iconeGrade.png",
+                texto: "Descrição da segunda imagem/evento."
+            },
+            {
+                imagem: "logos/iconeMonocromatico.png",
+                texto: "Descrição da terceira imagem/evento."
+            }
+        ];
+
         let index = 0;
-        const imagem =document.getElementById("imagemEvento");
-        const texto =document.getElementById("textoCarrossel");
-        const btnProximo =document.querySelector(".btnProximo");
-        const btnAnterior =document.querySelector(".btnAnterior");
-        function atualizarEvento(){
-            imagem.src = 
-            eventos[index].imagem;
-            texto.textContent =
-            eventos[index].texto;
+
+        const imagem = document.getElementById("imagemEvento");
+        const texto = document.getElementById("textoCarrossel");
+        const btnProximo = document.querySelector(".btnProximo");
+        const btnAnterior = document.querySelector(".btnAnterior");
+
+        function atualizarEvento() {
+            imagem.src = eventos[index].imagem;
+            texto.textContent = eventos[index].texto;
         }
-        btnProximo.addEventListener("click", () => {
+
+        function proximoEvento() {
             index++;
-            if(index >= eventos.length){
+
+            if (index >= eventos.length) {
                 index = 0;
             }
+
             atualizarEvento();
-        });
-        btnAnterior.addEventListener("click", () => {
+        }
+
+        function eventoAnterior() {
             index--;
-            if(index < 0){
+
+            if (index < 0) {
                 index = eventos.length - 1;
             }
+
             atualizarEvento();
-        });
+        }
+
+        btnProximo.addEventListener("click", proximoEvento);
+        btnAnterior.addEventListener("click", eventoAnterior);
+
+        // Troca automaticamente a cada 5 segundos
+        setInterval(proximoEvento, 3000);
+
         atualizarEvento();
     </script>
 </body>
+
 </html>

@@ -263,3 +263,51 @@ nav a:hover {
 .voltar:hover{
     background:#5a6268;
 }
+.escolha-perfil{
+    min-height: calc(100vh - 146px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+}
+
+.escolha-perfil h1{
+    margin-bottom:50px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:180px;
+    height:220px;
+    background:white;
+    border:1px solid #ddd;
+    border-radius:10px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+    color:black;
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.icone{
+    font-size:60px;
+    margin-bottom:20px;
+}

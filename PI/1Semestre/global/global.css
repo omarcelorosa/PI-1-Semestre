@@ -84,9 +84,11 @@ main{
 }
 .busca{
     position: relative;
+    width: 100%;
+    max-width: 500px;
 }
 .busca input{
-    width: 500px;
+    width: 100%;
     height: 20px;
     border: none;
     border-radius: 5px;
@@ -102,7 +104,8 @@ main{
 }
 nav{
     display: flex;
-    gap: 50px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 nav a{
     color: black;
@@ -138,7 +141,8 @@ nav a:hover{
     border-radius: 10px;
 }
 .descricao{
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     color: gray;
     line-height: 1.8;
     font-size: 18px;
@@ -151,7 +155,8 @@ nav a:hover{
     margin-top: 120px;
 }
 .carrosselEvento{
-    width: 700px;
+    width: 90%;
+    max-width: 700px;
     display: flex;
     justify-content: center;
 }
@@ -174,9 +179,53 @@ nav a:hover{
     color: white;
 }
 .textoEvento{
-    width: 700px;
+    width: 90%;
+    max-width: 700px;
     margin: 40px auto;
     text-align: center;
     font-size: 20px;
     color: gray;
+}
+@media (max-width: 768px){
+    .barraMenu{
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 10px;
+    }
+    .busca{
+        width: 100%;
+    }
+    nav{
+        justify-content: center;
+        gap: 15px;
+    }
+    .eventos{
+        padding: 20px;
+        gap: 60px;
+    }
+    .evento{
+        flex-direction: column;
+        text-align: center;
+    }
+    .evento:nth-child(even){
+        flex-direction: column;
+    }
+    .carrossel img{
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+    .descricao{
+        width: 100%;
+    }
+    .eventoPagina{
+        flex-direction: column;
+    }
+    .carrosselEvento img{
+        height: auto;
+    }
+    .textoEvento{
+        width: 95%;
+    }
 }

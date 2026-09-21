@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="global/global.css">
     <link rel="stylesheet" href="formulario.css">
     <link rel="icon" type="image/png" href="logos/favicon.png">
+    <script src="global/global.js" defer></script> <!-- Defer faz com que o script seja executado após o carregamento do HTML -->
     <title>SonoraWare</title>
 </head>
 
@@ -42,18 +43,6 @@
     <div id="footer"></div>
 
     <script>
-        fetch("global/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-            });
-
-        fetch("global/footer.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
-
         fetch("global/menuSimples.html")
             .then(res => res.text())
             .then(data => {

@@ -281,3 +281,12 @@ nav a:hover {
     font-size:60px;
     margin-bottom:20px;
 }
+#menuOp {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}

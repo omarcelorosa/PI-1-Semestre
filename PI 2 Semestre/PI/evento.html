@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global/global.css">
+    <link rel="icon" type="image/png" href="logos/favicon.png"><!--Ícone do site(aba)-->
+    <script src="global/global.js" defer></script>
+    <script src="js/eventos.js" defer></script>
+    <title>SonoraWare</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="menu"></div>
+
+    <main>
+        <div class="eventoPagina">
+            <button class="btnAnterior">◀</button>
+            <div class="carrosselEvento">
+                <img id="imagemEvento">
+            </div>
+            <button class="btnProximo">▶</button>
+        </div>
+        <div class="textoEvento">
+            <p id="textoCarrossel"></p>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script>
+        fetch("global/menuCompleto.html").then(res => res.text()).then(data => {
+            document.getElementById("menu").innerHTML = data;
+        });
+    </script>
+</body>
+
+</html>

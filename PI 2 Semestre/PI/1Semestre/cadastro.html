@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global/global.css">
+    <link rel="stylesheet" href="formulario.css">
+    <link rel="icon" type="image/png" href="logos/favicon.png">
+    <title>SonoraWare</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <div id="menu"></div>
+
+    <main class="escolha-perfil">
+
+        <h1>Como deseja se cadastrar?</h1>
+
+        <div class="cards">
+
+            <a href="cadastroBanda.html" class="card">
+                <div class="icone">🎸</div>
+                <h2>Banda</h2>
+            </a>
+
+            <a href="cadastroContratante.html" class="card">
+                <div class="icone">🤝</div>
+                <h2>Contratante</h2>
+            </a>
+
+            <a href="cadastroEvento.html" class="card">
+                <div class="icone">🎤</div>
+                <h2>Evento</h2>
+            </a>
+
+        </div>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("global/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+
+        fetch("global/footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        fetch("global/menuSimples.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("menu").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>

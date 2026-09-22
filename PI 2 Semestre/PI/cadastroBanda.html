@@ -14,7 +14,7 @@
 <body>
 
     <div id="header"></div>
-    <div id="menu"></div>
+    <div id="menu" data-tipo="simples"></div>
     <main>
         <div class="container">
             <h1>Cadastre sua Banda</h1>
@@ -71,14 +71,6 @@
         </div>
     </main>
     <div id="footer"></div>
-
-    <script>
-        fetch("global/menuSimples.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("menu").innerHTML = data;
-            });
-    </script>
 
 </body>
 

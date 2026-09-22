@@ -7,7 +7,7 @@ img {
 }
 
 body {
-    background-image: url("logos/fundo\ escalaColorida.png");
+    background-image: url("../logos/fundo\ escalaColorida.png");
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -105,4 +105,9 @@ button:hover {
     .contSup {
         font-size: 14px;
     }
+}
+.perguntaCad {
+    color: #FFD700;
+    filter: drop-shadow(0 0 5px #FF8C00)
+            drop-shadow(0 0 12px #FF4500);
 }

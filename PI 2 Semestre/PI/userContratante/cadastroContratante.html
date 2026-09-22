@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../global/global.css">
+    <link rel="icon" type="image/png" href="../logos/favicon.png">
+
+    <script src="../global/global.js" defer></script>
+
+    <title>Cadastro de Contratante</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <div id="menu" data-tipo="simples"></div>
+
+    <main>
+
+        <div class="container">
+
+            <h1>Cadastre seu Local</h1>
+
+            <form>
+
+                <h2>Dados do Local</h2>
+
+                <div class="linha">
+                    <input type="text" id="nomeLocal" placeholder="Nome do Local" required>
+                    <input type="text" id="cep" placeholder="CEP *" required>
+                </div>
+
+                <div class="linha">
+                    <select id="estado" required>
+                        <option value="" hidden>Selecione um Estado *</option>
+                    </select>
+
+                    <select id="cidade" required>
+                        <option value="" hidden>Selecione uma Cidade *</option>
+                    </select>
+                </div>
+
+                <div class="linha">
+                    <input type="text" id="endereco" placeholder="Endereço *" required>
+                    <input type="text" id="numero" placeholder="Número *" required>
+                </div>
+
+                <div class="linha">
+                    <input type="text" id="complemento" placeholder="Complemento (opcional)">
+                </div>
+
+
+                <h2>Contato</h2>
+
+                <div class="linha">
+                    <input type="tel" placeholder="Telefone / WhatsApp *" required>
+                    <input type="email" placeholder="E-mail *" required>
+                </div>
+
+
+                <h2>Presença Online</h2>
+
+                <div class="linha">
+                    <input type="url" placeholder="Site (opcional)">
+                    <input type="url" placeholder="Instagram (opcional)">
+                </div>
+
+                <div class="linha">
+                    <input type="url" placeholder="Facebook (opcional)">
+                    <input type="url" placeholder="YouTube (opcional)">
+                </div>
+
+
+                <h2>Sobre o Local</h2>
+
+                <div class="linha">
+                    <textarea placeholder="Descreva seu local, ambiente, tipo de eventos, público, etc."></textarea>
+                </div>
+
+
+                <div class="botoes">
+
+                    <button type="button" class="voltar"
+                        onclick="window.location.href='../cadastro.html'">
+                        Voltar
+                    </button>
+
+                    <button type="submit">
+                        Próximo
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>

@@ -312,7 +312,7 @@ button:hover {
     width: 180px;
     height: 220px;
     background: white;
-    border: 1px solid #ddd;
+    border: 1px solid #050505;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -325,7 +325,7 @@ button:hover {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0 0 5px rgb(29, 131, 233)) drop-shadow(0 0 12px rgb(29, 131, 233));
 }
 
 .icone {
@@ -495,4 +495,12 @@ button:hover {
     .textoEvento {
         width: 95%;
     }
+}
+#menu {
+    position: fixed;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
 }

@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="global/global.css">
     <link rel="stylesheet" href="formulario.css">
     <link rel="icon" type="image/png" href="logos/favicon.png">
-    <script src="global/global.js" defer></script> <!-- Defer faz com que o script seja executado após o carregamento do HTML -->
+    <script src="global/global.js" defer></script>
+    <!-- Defer faz com que o script seja executado após o carregamento do HTML -->
     <title>SonoraWare</title>
 </head>
 
 <body>
 
     <div id="header"></div>
-    <div id="menu"></div>
+    <div id="menu" data-tipo="simples"></div>
 
     <main class="escolha-perfil">
 
         <h1>Como deseja se cadastrar?</h1>
 
         <div class="cards">
-
-            <a href="cadastroBanda.html" class="card">
-                <div class="icone">🎸</div>
-                <h2>Banda</h2>
-            </a>
-
-            <a href="cadastroContratante.html" class="card">
-                <div class="icone">🤝</div>
-                <h2>Contratante</h2>
-            </a>
-
             <a href="cadastroEvento.html" class="card">
                 <div class="icone">🎤</div>
                 <h2>Evento</h2>
@@ -42,13 +33,7 @@
 
     <div id="footer"></div>
 
-    <script>
-        fetch("global/menuSimples.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("menu").innerHTML = data;
-            });
-    </script>
 
 </body>
+
 </html>

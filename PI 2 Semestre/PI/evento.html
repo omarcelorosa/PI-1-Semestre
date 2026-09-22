@@ -13,7 +13,7 @@
 
 <body>
     <div id="header"></div>
-    <div id="menu"></div>
+    <div id="menu" data-tipo="completo"></div>
 
     <main>
         <div class="eventoPagina">
@@ -29,11 +29,6 @@
     </main>
 
     <div id="footer"></div>
-    <script>
-        fetch("global/menuCompleto.html").then(res => res.text()).then(data => {
-            document.getElementById("menu").innerHTML = data;
-        });
-    </script>
 </body>
 
 </html>
